@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>광역 연계(전남·경남·부산) 3박 4일 여행 일정표</title>
+    
+    <!-- 카카오톡/SNS 공유용 썸네일 및 정보 (Open Graph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="전남·경남·부산 3박 4일 여행 일정표 - 투어메이커">
+    <meta property="og:description" content="2026.05.01(금) ~ 05.04(월) 사북 출발 3박 4일 광역 연계 투어 일정표입니다.">
+    <meta property="og:image" content="https://blogger.googleusercontent.com/img/a/AVvXsEhPxG_ONo2BdFAGDNnn-pHIGJTrAq374YbqgwTTlyIZTP22kOWTDD_AyjKDNFPhsHg5t1Iq6zV0dL_NZIj4o97Kd0eWJYCv-NHhtIqme-Mp3htGhAdkqVv5NRU3Jc9TbdbvvVKrPslObA1oNABpgl12QtGwirC2QM5lcPCVoWm8pIbeKuZBbeDHAvpbKEQ">
+
+    <!-- Google Analytics (GA4) 탑재 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLH9GD9SVR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JLH9GD9SVR');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f3f4f6;
+            color: #111827;
+        }
+        /* A4 사이즈 및 화면 스타일 */
+        .a4-page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            background: white;
+            padding: 12mm 15mm;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        table { border-collapse: collapse; width: 100%; table-layout: fixed; }
+        th, td { border: 2px solid #d1d5db; padding: 6px 8px; }
+        th { background-color: #f3f4f6; font-size: 1.15rem; font-weight: 700; text-align: center; }
+        
+        .highlight-text { font-size: 1.1rem; font-weight: 700; color: #1e3a8a; }
+        .meal-text { font-size: 1.05rem; font-weight: 700; color: #b91c1c; }
+
+        @media print {
+            body { background-color: white; }
+            .a4-page {
+                margin: 0; padding: 0; box-shadow: none; width: 100%; height: auto;
+                page-break-after: avoid; page-break-before: avoid;
+            }
+            .no-print { display: none !important; }
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            @page { size: A4 portrait; margin: 8mm 10mm; } /* 인쇄 여백 최적화 */
+            
+            /* 4일차 일정이 한 장에 쏙 들어가도록 폰트 및 패딩 대폭 압축 */
+            .text-4xl { font-size: 1.6rem !important; line-height: 1.1 !important; margin-bottom: 0.2rem !important; }
+            .text-2xl { font-size: 1.1rem !important; }
+            .text-xl { font-size: 0.95rem !important; }
+            .text-lg { font-size: 0.82rem !important; line-height: 1.25 !important; }
+            .text-base { font-size: 0.75rem !important; }
+            
+            .highlight-text { font-size: 0.88rem !important; }
+            .meal-text { font-size: 0.85rem !important; }
+            
+            /* 여백 압축 */
+            .mb-4 { margin-bottom: 0.3rem !important; }
+            .mb-3 { margin-bottom: 0.2rem !important; }
+            .mb-2 { margin-bottom: 0.1rem !important; }
+            .mb-1 { margin-bottom: 0.1rem !important; }
+            .p-3 { padding: 0.3rem 0.5rem !important; }
+            .py-3 { padding-top: 0.2rem !important; padding-bottom: 0.2rem !important; }
+            
+            th { padding: 3px !important; font-size: 0.9rem !important; }
+            td { padding: 2px 4px !important; }
+            
+            /* 호텔 뱃지 사이즈 축소 */
+            .hotel-badge { padding: 2px 6px !important; font-size: 0.75rem !important; margin-top: 2px !important; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 화면에만 보이는 인쇄하기 버튼 -->
+<div class="no-print max-w-4xl mx-auto pt-6 px-4 flex justify-end mb-2">
+    <button onclick="window.print()" class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg flex items-center transition-colors">
+        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+        일정표 인쇄하기 (A4 1장)
+    </button>
+</div>
+
+<div class="a4-page flex flex-col justify-between">
+    
+    <!-- 상단 헤더 -->
+    <div>
+        <div class="flex justify-between items-start mb-1">
+            <!-- 투어메이커 로고 -->
+            <div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHfgIX70O5k6Anuo0UgALIdaG9jSga9auHu3uyz0uEirylGPAJnjN_qQbvEGMUvPqUQf_g9FMNUHRxlDcUBf4vZ3Mpy4TnA9WxbmzWYK11gt2zuy_Irl4wctNFjcjLyPo0GPXV792o_J7L9guRMuDfeC1gy7USwywjYbECZgzcsHybuGRRAXAnO1eNmP8/s320/logo.png" alt="투어메이커 로고" class="h-8 object-contain">
+            </div>
+            <div class="text-right text-base font-bold text-gray-800">
+                <p>제출일 : 2026. 04. 13</p>
+                <p class="text-xl mt-0.5 text-blue-900">고객님 귀하</p>
+            </div>
+        </div>
+
+        <h1 class="text-4xl font-black text-center mb-2 tracking-wide text-gray-900">광역 연계(전남·경남·부산) 3박 4일 투어</h1>
+
+        <!-- 담당자 정보 -->
+        <div class="text-center mb-3">
+            <p class="text-sm font-bold text-gray-600 mb-0.5">항상 최선의 서비스를 약속드립니다.</p>
+            <a href="tel:010-5115-6118" title="클릭하여 전화 걸기" class="inline-flex items-center justify-center bg-blue-900 text-white px-5 py-1 rounded-full text-lg font-black shadow-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                담당자 : 김효돈 010-5115-6118
+            </a>
+        </div>
+
+        <!-- 핵심 요약 박스 -->
+        <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-2 mb-2">
+            <div class="grid grid-cols-2 gap-x-2 gap-y-1 text-lg">
+                <div class="flex items-center"><span class="font-bold w-20 text-gray-700">여행기간 :</span> <span class="font-bold text-blue-800">2026.05.01(금) ~ 05.04(월)</span></div>
+                <div class="flex items-center"><span class="font-bold w-20 text-gray-700">여 행 지 :</span> <span class="font-bold text-gray-900">전남, 경남, 부산 등</span></div>
+                <div class="flex items-center"><span class="font-bold w-20 text-gray-700">참여인원 :</span> <span class="font-bold text-gray-900">30명 기준</span></div>
+                <div class="flex items-center"><span class="font-bold w-20 text-gray-700">출 발 지 :</span> <span class="font-bold text-red-600">강원도 사북 (05:00 출발)</span></div>
+            </div>
+        </div>
+
+        <!-- 세부 일정표 -->
+        <table class="mb-2">
+            <thead>
+                <tr>
+                    <th style="width: 12%;">일차</th>
+                    <th style="width: 20%;">지역/시간</th>
+                    <th style="width: 53%;">상세 일정 안내</th>
+                    <th style="width: 15%;">식사</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 1일차 -->
+                <tr class="bg-white">
+                    <td class="text-center font-black text-xl text-blue-800">1일차<br><span class="text-base font-bold text-gray-600">5/1 (금)</span></td>
+                    <td class="text-center font-bold text-base leading-snug">
+                        05:00 사북<br>↓<br>곡성·함평<br>↓<br>목포
+                    </td>
+                    <td class="text-lg leading-snug">
+                        • 강원도 사북 출발 및 조식(풍기 인근)<br>
+                        • 곡성 <span class="highlight-text">섬진강 기차마을</span> 관람<br>
+                        • <span class="highlight-text">함평 나비대축제</span> 행사장 관람 (생태체험)<br>
+                        • 무안으로 이동하여 든든한 석식<br>
+                        <span class="hotel-badge inline-block mt-1 bg-gray-100 px-2 py-0.5 rounded font-bold text-gray-700">🏨 목포 폰타나호텔 (1박)</span>
+                    </td>
+                    <td class="text-center leading-relaxed">
+                        <span class="font-bold text-gray-600">조식:</span> 한식<br>
+                        <span class="font-bold text-gray-600">중식:</span> <span class="meal-text">참게매운탕</span><br>
+                        <span class="font-bold text-gray-600">석식:</span> <span class="meal-text">낙지코스</span>
+                    </td>
+                </tr>
+                
+                <!-- 2일차 -->
+                <tr class="bg-gray-50">
+                    <td class="text-center font-black text-xl text-blue-800">2일차<br><span class="text-base font-bold text-gray-600">5/2 (토)</span></td>
+                    <td class="text-center font-bold text-base leading-snug">
+                        08:00 목포<br>↓<br>순천
+                    </td>
+                    <td class="text-lg leading-snug">
+                        • 호텔 조식 후 <span class="highlight-text">목포 자연사박물관</span> 관람<br>
+                        • 목포 전통시장(동부시장) 탐방 및 특산물 쇼핑<br>
+                        • 순천으로 이동하여 유네스코 <span class="highlight-text">순천만 국가정원</span> 관람<br>
+                        • 석식 후 호텔 체크인 및 휴식<br>
+                        <span class="hotel-badge inline-block mt-1 bg-gray-200 px-2 py-0.5 rounded font-bold text-gray-700">🏨 순천 부영호텔 (1박)</span>
+                    </td>
+                    <td class="text-center leading-relaxed">
+                        <span class="font-bold text-gray-600">조식:</span> 호텔/한식<br>
+                        <span class="font-bold text-gray-600">중식:</span> <span class="meal-text">한식정찬</span><br>
+                        <span class="font-bold text-gray-600">석식:</span> <span class="meal-text">꼬막정식</span>
+                    </td>
+                </tr>
+
+                <!-- 3일차 -->
+                <tr class="bg-white">
+                    <td class="text-center font-black text-xl text-blue-800">3일차<br><span class="text-base font-bold text-gray-600">5/3 (일)</span></td>
+                    <td class="text-center font-bold text-base leading-snug">
+                        08:00 순천<br>↓<br>하동·거제
+                    </td>
+                    <td class="text-lg leading-snug">
+                        • 조식 후 이동, 하동 <span class="highlight-text">플라이웨이 케이블카</span> 탑승<br>
+                        • 거제로 이동하여 중식<br>
+                        • 돔형 열대 온실 <span class="highlight-text">거제 식물원(정글돔)</span> 관람<br>
+                        • 거제 <span class="highlight-text">예술랜드</span> 관람 및 특식 석식<br>
+                        <span class="hotel-badge inline-block mt-1 bg-gray-100 px-2 py-0.5 rounded font-bold text-gray-700">🏨 거제 레지던스 케이호텔 (1박)</span>
+                    </td>
+                    <td class="text-center leading-relaxed">
+                        <span class="font-bold text-gray-600">조식:</span> <span class="meal-text">건봉국밥</span><br>
+                        <span class="font-bold text-gray-600">중식:</span> 현지식<br>
+                        <span class="font-bold text-gray-600">석식:</span> <span class="meal-text block leading-tight mt-0.5">게장 및<br>꼬막정식</span>
+                    </td>
+                </tr>
+
+                <!-- 4일차 -->
+                <tr class="bg-gray-50">
+                    <td class="text-center font-black text-xl text-blue-800">4일차<br><span class="text-base font-bold text-gray-600">5/4 (월)</span></td>
+                    <td class="text-center font-bold text-base leading-snug">
+                        08:00 거제<br>↓<br>부산·울진<br>↓<br>21:30 사북
+                    </td>
+                    <td class="text-lg leading-snug">
+                        • 조식 후 거제 출발, 부산으로 이동<br>
+                        • <span class="highlight-text">부산 자갈치 시장 및 국제시장</span> 자유 탐방<br>
+                        • 동해안 7번 국도 따라 북상 이동 (부산→울진)<br>
+                        • 울진에서 저녁 식사 후 강원도 사북으로 이동<br>
+                        • 사북 도착 후 해산 (안녕히 가십시오)
+                    </td>
+                    <td class="text-center leading-relaxed">
+                        <span class="font-bold text-gray-600">조식:</span> 호텔/한식<br>
+                        <span class="font-bold text-gray-600">중식:</span> <span class="meal-text">안동보리밥</span><br>
+                        <span class="font-bold text-gray-600">석식:</span> <span class="meal-text block leading-tight mt-0.5">바다횟집<br>(회정식)</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 참고사항 (공간 절약을 위해 컴팩트하게 구성) -->
+        <div class="border-2 border-gray-300 p-2 rounded-lg bg-white mb-2">
+            <h3 class="font-black text-base mb-1 text-gray-800 flex items-center">
+                <svg class="w-4 h-4 mr-1 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                행사 참고사항
+            </h3>
+            <p class="text-sm text-gray-800 font-medium">
+                <span class="font-bold text-blue-700">■ 포함내역 :</span> 전용차량, 숙박(3박), 전 일정 식사(특식 포함), 일정상의 관광지 입장료<br>
+                <span class="font-bold text-gray-700">■ 유의사항 :</span> 본 일정은 현지 기상 및 도로 사정에 의해 다소 변경될 수 있습니다.
+            </p>
+        </div>
+    </div>
+
+    <!-- 하단 푸터 -->
+    <div class="mt-auto">
+        <!-- 투어메이커 공통 푸터 -->
+        <div class="border-t-2 border-gray-200 py-2 px-4 text-center rounded-b-lg" style="background-color: #f8f9fa;">
+            <div class="flex flex-wrap items-center justify-center space-x-4 mb-1">
+                <a href="https://tourmaker.kr" target="_blank" class="no-print inline-block bg-white border border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-blue-600 font-bold py-1 px-3 rounded shadow-sm transition-colors text-xs">
+                    투어메이커 홈페이지 바로가기
+                </a>
+            </div>
+            <p style="font-size: 11px; color: #6c757d; text-align: center; margin: 0; font-weight: 500;">
+                [System Powered by TOURMAKER] 본 스마트 가이드북은 기획과 <a href="https://tourmaker.kr" target="_blank" style="text-decoration: underline; color: #6c757d;">투어메이커</a>의 트래블 테크 기술 제휴로 제작되었습니다.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onload = function() {
+        console.log("Ready for print. Press Ctrl+P or Cmd+P.");
+    };
+</script>
+</body>
+</html>
