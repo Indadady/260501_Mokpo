@@ -43,7 +43,7 @@
         th { background-color: #f3f4f6; font-size: 1.15rem; font-weight: 700; text-align: center; }
         
         .highlight-text { font-size: 1.1rem; font-weight: 700; color: #1e3a8a; }
-        .meal-text { font-size: 1.05rem; font-weight: 700; color: #b91c1c; }
+        .meal-text { font-size: 1.1rem; font-weight: 700; color: #b91c1c; } /* 기본 화면에서도 크기 통일 */
 
         @media print {
             body { background-color: white; }
@@ -62,25 +62,28 @@
             .text-4xl { font-size: 1.6rem !important; line-height: 1.1 !important; margin-bottom: 0.2rem !important; }
             .text-2xl { font-size: 1.1rem !important; }
             .text-xl { font-size: 0.95rem !important; }
-            .text-lg { font-size: 0.82rem !important; line-height: 1.25 !important; }
-            .text-base { font-size: 0.75rem !important; }
             
-            .highlight-text { font-size: 0.88rem !important; }
-            .meal-text { font-size: 0.85rem !important; }
+            /* [요청반영] 식사부분과 상세일정 안내 글자크기 통일 및 위아래 공백 제거 */
+            .text-lg, .text-base, .meal-text, .highlight-text { 
+                font-size: 0.85rem !important; 
+                line-height: 1.25 !important; 
+            }
             
-            /* 여백 압축 */
-            .mb-4 { margin-bottom: 0.3rem !important; }
-            .mb-3 { margin-bottom: 0.2rem !important; }
+            /* 여백 완전 압축 */
+            .mb-4 { margin-bottom: 0 !important; }
+            .mb-3 { margin-bottom: 0.1rem !important; }
             .mb-2 { margin-bottom: 0.1rem !important; }
             .mb-1 { margin-bottom: 0.1rem !important; }
-            .p-3 { padding: 0.3rem 0.5rem !important; }
-            .py-3 { padding-top: 0.2rem !important; padding-bottom: 0.2rem !important; }
+            .p-3 { padding: 0.2rem !important; }
+            .py-3 { padding-top: 0.1rem !important; padding-bottom: 0.1rem !important; }
             
-            th { padding: 3px !important; font-size: 0.9rem !important; }
-            td { padding: 2px 4px !important; }
+            th { padding: 2px !important; font-size: 0.9rem !important; }
+            /* [요청반영] td의 위아래 패딩을 0으로 만들어 행 높이 최소화 */
+            td { padding: 0px 4px !important; } 
             
-            /* 호텔 뱃지 사이즈 축소 */
-            .hotel-badge { padding: 2px 6px !important; font-size: 0.75rem !important; margin-top: 2px !important; }
+            /* 호텔 뱃지 사이즈 및 여백 축소 */
+            .hotel-badge { padding: 1px 4px !important; font-size: 0.75rem !important; margin-top: 1px !important; }
+            p { margin: 0 !important; }
         }
     </style>
 </head>
@@ -135,9 +138,9 @@
             <thead>
                 <tr>
                     <th style="width: 12%;">일차</th>
-                    <th style="width: 20%;">지역/시간</th>
-                    <th style="width: 53%;">상세 일정 안내</th>
-                    <th style="width: 15%;">식사</th>
+                    <th style="width: 18%;">지역/시간</th>
+                    <th style="width: 50%;">상세 일정 안내</th>
+                    <th style="width: 20%;">식사</th>
                 </tr>
             </thead>
             <tbody>
@@ -154,7 +157,7 @@
                         • 무안으로 이동하여 든든한 석식<br>
                         <span class="hotel-badge inline-block mt-1 bg-gray-100 px-2 py-0.5 rounded font-bold text-gray-700">🏨 목포 폰타나호텔 (1박)</span>
                     </td>
-                    <td class="text-center leading-relaxed">
+                    <td class="text-lg text-center leading-tight whitespace-nowrap">
                         <span class="font-bold text-gray-600">조식:</span> 한식<br>
                         <span class="font-bold text-gray-600">중식:</span> <span class="meal-text">참게매운탕</span><br>
                         <span class="font-bold text-gray-600">석식:</span> <span class="meal-text">낙지코스</span>
@@ -171,10 +174,11 @@
                         • 호텔 조식 후 <span class="highlight-text">목포 자연사박물관</span> 관람<br>
                         • 목포 전통시장(동부시장) 탐방 및 특산물 쇼핑<br>
                         • 순천으로 이동하여 유네스코 <span class="highlight-text">순천만 국가정원</span> 관람<br>
+                        • 순천 <span class="highlight-text">세계수석박물관</span> 관람<br> <!-- 추가됨 -->
                         • 석식 후 호텔 체크인 및 휴식<br>
                         <span class="hotel-badge inline-block mt-1 bg-gray-200 px-2 py-0.5 rounded font-bold text-gray-700">🏨 순천 부영호텔 (1박)</span>
                     </td>
-                    <td class="text-center leading-relaxed">
+                    <td class="text-lg text-center leading-tight whitespace-nowrap">
                         <span class="font-bold text-gray-600">조식:</span> 호텔/한식<br>
                         <span class="font-bold text-gray-600">중식:</span> <span class="meal-text">한식정찬</span><br>
                         <span class="font-bold text-gray-600">석식:</span> <span class="meal-text">꼬막정식</span>
@@ -191,13 +195,14 @@
                         • 조식 후 이동, 하동 <span class="highlight-text">플라이웨이 케이블카</span> 탑승<br>
                         • 거제로 이동하여 중식<br>
                         • 돔형 열대 온실 <span class="highlight-text">거제 식물원(정글돔)</span> 관람<br>
-                        • 거제 <span class="highlight-text">예술랜드</span> 관람 및 특식 석식<br>
+                        • 거제 <span class="highlight-text">예술랜드</span> 관람<br>
+                        • 거제 <span class="highlight-text">파노라마 케이블카</span> 탑승 및 특식 석식<br> <!-- 추가됨 -->
                         <span class="hotel-badge inline-block mt-1 bg-gray-100 px-2 py-0.5 rounded font-bold text-gray-700">🏨 거제 레지던스 케이호텔 (1박)</span>
                     </td>
-                    <td class="text-center leading-relaxed">
+                    <td class="text-lg text-center leading-tight whitespace-nowrap">
                         <span class="font-bold text-gray-600">조식:</span> <span class="meal-text">건봉국밥</span><br>
                         <span class="font-bold text-gray-600">중식:</span> 현지식<br>
-                        <span class="font-bold text-gray-600">석식:</span> <span class="meal-text block leading-tight mt-0.5">게장 및<br>꼬막정식</span>
+                        <span class="font-bold text-gray-600">석식:</span> <span class="meal-text">한꼬막두꼬막</span> <!-- 수정됨 -->
                     </td>
                 </tr>
 
@@ -209,21 +214,21 @@
                     </td>
                     <td class="text-lg leading-snug">
                         • 조식 후 거제 출발, 부산으로 이동<br>
-                        • <span class="highlight-text">부산 자갈치 시장 및 국제시장</span> 자유 탐방<br>
+                        • 부산 <span class="highlight-text">송도해상케이블카</span> 탑승<br> <!-- 수정됨 -->
                         • 동해안 7번 국도 따라 북상 이동 (부산→울진)<br>
                         • 울진에서 저녁 식사 후 강원도 사북으로 이동<br>
                         • 사북 도착 후 해산 (안녕히 가십시오)
                     </td>
-                    <td class="text-center leading-relaxed">
+                    <td class="text-lg text-center leading-tight whitespace-nowrap">
                         <span class="font-bold text-gray-600">조식:</span> 호텔/한식<br>
                         <span class="font-bold text-gray-600">중식:</span> <span class="meal-text">안동보리밥</span><br>
-                        <span class="font-bold text-gray-600">석식:</span> <span class="meal-text block leading-tight mt-0.5">바다횟집<br>(회정식)</span>
+                        <span class="font-bold text-gray-600">석식:</span> <span class="meal-text">바다횟집(회정식)</span>
                     </td>
                 </tr>
             </tbody>
         </table>
 
-        <!-- 참고사항 (공간 절약을 위해 컴팩트하게 구성) -->
+        <!-- 참고사항 -->
         <div class="border-2 border-gray-300 p-2 rounded-lg bg-white mb-2">
             <h3 class="font-black text-base mb-1 text-gray-800 flex items-center">
                 <svg class="w-4 h-4 mr-1 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -238,7 +243,6 @@
 
     <!-- 하단 푸터 -->
     <div class="mt-auto">
-        <!-- 투어메이커 공통 푸터 -->
         <div class="border-t-2 border-gray-200 py-2 px-4 text-center rounded-b-lg" style="background-color: #f8f9fa;">
             <div class="flex flex-wrap items-center justify-center space-x-4 mb-1">
                 <a href="https://tourmaker.kr" target="_blank" class="no-print inline-block bg-white border border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-blue-600 font-bold py-1 px-3 rounded shadow-sm transition-colors text-xs">
